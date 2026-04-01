@@ -8,10 +8,10 @@
 import { useState } from 'react'
 // Las credenciales de demo las tengo en un archivo separado para no mezclar
 // datos con lógica del formulario.
-import { credencialesDemo } from './credenciales-demo'
+import { credencialesDemo } from '../datos/credenciales-demo'
 // La validación la puse en su propio archivo para que este componente
 // no quede demasiado largo y sea más fácil de mantener.
-import { validarFormularioLogin } from './validar-formulario-login'
+import { validarFormularioLogin } from '../utilidades/validar-formulario-login'
 // CampoFormulario es el input genérico que armé para reutilizar.
 import { CampoFormulario } from './CampoFormulario'
 

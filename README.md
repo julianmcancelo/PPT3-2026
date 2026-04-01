@@ -1,16 +1,60 @@
-# React + Vite
+# PPT3-2026
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Repositorio principal del trabajo practico.
 
-Currently, two official plugins are available:
+## Estructura
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```text
+PPT3-2026/
+├── Modulos/
+│   └── Login/
+│       ├── src/
+│       ├── public/
+│       ├── package.json
+│       ├── package-lock.json
+│       ├── vite.config.js
+│       ├── eslint.config.js
+│       └── README.md
+├── .gitignore
+└── README.md
+```
 
-## React Compiler
+## Modulo actual
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+El proyecto frontend actual vive en:
 
-## Expanding the ESLint configuration
+`Modulos/Login`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Ese modulo contiene:
+
+- la aplicacion React + Vite
+- la pantalla de login
+- la pantalla posterior de bienvenida
+- utilidades, datos y componentes organizados por responsabilidad
+
+## Como trabajar
+
+1. Entrar al modulo:
+
+   `cd Modulos/Login`
+
+2. Instalar dependencias:
+
+   `npm install`
+
+3. Levantar el proyecto:
+
+   `npm run dev`
+
+4. Verificar calidad:
+
+   `npm run lint`
+
+5. Generar build:
+
+   `npm run build`
+
+## Nota de organizacion
+
+Se dejo la raiz del repo limpia para que cada modulo pueda crecer de manera independiente.
+El modulo `Login` ya esta preparado para seguir separando responsabilidades internas por componentes, datos y utilidades.
