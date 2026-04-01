@@ -1,10 +1,9 @@
+import dayjs from 'dayjs'
 import { Clock3 } from 'lucide-react'
-import { obtenerTextoHora } from '../../utilidades/formatear-fecha'
 
 export function TarjetaHora({ fechaActual }) {
-  // Este componente usa la misma fecha del panel para mantener el reloj sincronizado.
-  // La hora se muestra sin segundos para una lectura mas clara.
-  const textoHora = obtenerTextoHora(fechaActual)
+  // Usamos dayjs para mantener el formato del reloj claro y facil de extender.
+  const textoHora = dayjs(fechaActual).format('HH:mm:ss')
 
   return (
     <article className="relative overflow-hidden rounded-2xl border border-[#B3E5FC] bg-gradient-to-b from-[#F0FAFF] to-[#E8F7FD] p-2 shadow-[0_8px_18px_rgba(41,171,226,0.08)]">
