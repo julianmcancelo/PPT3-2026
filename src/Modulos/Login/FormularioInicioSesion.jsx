@@ -8,10 +8,10 @@
 import { useState } from 'react'
 // Las credenciales de demo las tengo en un archivo separado para no mezclar
 // datos con lógica del formulario.
-import { credencialesDemo } from '../datos/credenciales-demo'
+import { credencialesDemo } from './credenciales-demo'
 // La validación la puse en su propio archivo para que este componente
 // no quede demasiado largo y sea más fácil de mantener.
-import { validarFormularioLogin } from '../utilidades/validar-formulario-login'
+import { validarFormularioLogin } from './validar-formulario-login'
 // CampoFormulario es el input genérico que armé para reutilizar.
 import { CampoFormulario } from './CampoFormulario'
 
@@ -87,31 +87,14 @@ export function FormularioInicioSesion({ onInicioSesionExitoso }) {
           {/* Franja azul fina arriba, igual al detalle decorativo del sitio del instituto. */}
           <div className="h-1 bg-[#29ABE2]" />
 
-          {/* Uso la imagen del isótipo directamente desde public/footer.png.
-              La pongo centrada y grande para que sea lo primero que se vea al abrir el login. */}
-          <div className="flex flex-col items-center px-5 py-5 gap-3">
-
-            {/* Isótipo oficial: imagen guardada en public/footer.png.
-                80px de alto para que sea visible y reconocible de entrada. */}
+          {/* Isótipo oficial centrado, directo desde public/footer.png.
+              Solo la imagen, sin texto adicional debajo. */}
+          <div className="flex justify-center px-5 py-5">
             <img
               src="/footer.png"
               alt="Instituto Tecnológico Beltrán"
               className="h-20 w-auto object-contain"
             />
-
-            {/* Nombre y subtítulo del instituto debajo de la imagen, centrados. */}
-            <div className="text-center">
-              <p className="text-[0.78rem] font-bold uppercase tracking-[0.14em] text-white">
-                Instituto Tecnológico Beltrán
-              </p>
-              <p className="mt-0.5 text-[0.65rem] tracking-wide text-[#29ABE2]">
-                Centro de Tecnología e Innovación
-              </p>
-              <p className="mt-0.5 text-[0.58rem] text-white/45">
-                UOM · Unión Obrera Metalúrgica · Avellaneda
-              </p>
-            </div>
-
           </div>
         </div>
 

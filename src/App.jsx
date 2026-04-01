@@ -4,7 +4,7 @@
 // ============================================================
 
 import { useState } from 'react'
-import { PaginaInicioSesion } from './paginas/PaginaInicioSesion'
+import { PaginaInicioSesion } from './Modulos/Login/PaginaInicioSesion'
 import { PantallaBienvenida } from './paginas/PantallaBienvenida'
 
 function App() {
