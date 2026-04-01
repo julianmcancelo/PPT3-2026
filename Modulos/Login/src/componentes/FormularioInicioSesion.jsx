@@ -5,6 +5,7 @@ import { CampoFormulario } from './CampoFormulario'
 
 // Estado base del formulario.
 const formularioInicial = { correo: '', clave: '' }
+const logoInstitucional = `${import.meta.env.BASE_URL}footer.png`
 
 export function FormularioInicioSesion({ onInicioSesionExitoso }) {
   // Estados del formulario y del modal de ayuda.
@@ -69,7 +70,7 @@ export function FormularioInicioSesion({ onInicioSesionExitoso }) {
 
           <div className="flex justify-center px-5 py-5">
             <img
-              src="/footer.png"
+              src={logoInstitucional}
               alt="Instituto Tecnologico Beltran"
               className="h-20 w-auto object-contain"
             />

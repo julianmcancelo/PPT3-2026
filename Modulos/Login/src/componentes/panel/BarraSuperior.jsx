@@ -5,6 +5,7 @@ import { ModalConfirmacion } from '../ModalConfirmacion'
 export function BarraSuperior({ usuario, temperatura, onCerrarSesion }) {
   const [modalAbierto, setModalAbierto] = useState(false)
   const textoTemperatura = temperatura !== null ? `${temperatura}\u00B0C` : '--'
+  const logoInstitucional = `${import.meta.env.BASE_URL}footer.png`
 
   return (
     <header className="bg-[#2A3448]">
@@ -12,7 +13,7 @@ export function BarraSuperior({ usuario, temperatura, onCerrarSesion }) {
 
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <img
-          src="/footer.png"
+          src={logoInstitucional}
           alt="Instituto Tecnologico Beltran"
           className="h-10 w-auto object-contain"
         />

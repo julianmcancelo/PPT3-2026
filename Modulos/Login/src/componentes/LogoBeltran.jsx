@@ -1,5 +1,6 @@
 export function LogoBeltran({ size = 48, variant = 'light' }) {
   const iconSize = Math.round(size * 0.85)
+  const logoInstitucional = `${import.meta.env.BASE_URL}footer.png`
 
   const colorNombre = variant === 'dark' ? '#FFFFFF' : '#1A2535'
   const colorSubtitulo = variant === 'dark' ? '#29ABE2' : '#546E7A'
@@ -10,7 +11,7 @@ export function LogoBeltran({ size = 48, variant = 'light' }) {
       style={{ height: size, display: 'flex', alignItems: 'center', gap: '0.65rem' }}
     >
       <img
-        src="/footer.png"
+        src={logoInstitucional}
         alt="Isotipo Instituto Tecnologico Beltran"
         style={{
           width: iconSize,
