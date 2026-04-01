@@ -1,9 +1,10 @@
 import { useState } from 'react'
-import { LogOut } from 'lucide-react'
+import { CloudSun, LogOut } from 'lucide-react'
 import { ModalConfirmacion } from '../ModalConfirmacion'
 
-export function BarraSuperior({ usuario, onCerrarSesion }) {
+export function BarraSuperior({ usuario, temperatura, onCerrarSesion }) {
   const [modalAbierto, setModalAbierto] = useState(false)
+  const textoTemperatura = temperatura !== null ? `${temperatura}\u00B0C` : '--'
 
   return (
     <header className="bg-[#2A3448]">
@@ -16,7 +17,22 @@ export function BarraSuperior({ usuario, onCerrarSesion }) {
           className="h-10 w-auto object-contain"
         />
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
+          {/* El clima queda visible sin ocupar demasiado espacio. */}
+          <div className="flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-2.5 py-1 text-white sm:px-3">
+            <span className="grid h-6 w-6 place-items-center rounded-full bg-[#29ABE2]/20 text-[#8ED8F8]">
+              <CloudSun size={13} />
+            </span>
+            <div className="flex flex-col leading-none">
+              <span className="text-[9px] font-semibold uppercase tracking-[0.18em] text-white/55">
+                Clima
+              </span>
+              <span className="text-xs font-semibold text-white">
+                {textoTemperatura}
+              </span>
+            </div>
+          </div>
+
           <span className="hidden text-xs text-white/60 sm:block">
             {usuario.correo}
           </span>
