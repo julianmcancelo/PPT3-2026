@@ -12,7 +12,7 @@
 
 ---
 
-## 📁 Estructura del repositorio
+## Estructura del repositorio
 
 ```text
 PPT3-2026/
@@ -33,20 +33,20 @@ PPT3-2026/
 
 ---
 
-## 🚀 Módulo actual — Login
+## Módulo actual — Login
 
 El módulo principal vive en `Modulos/Login` e incluye:
 
 | Sección | Descripción |
 |---|---|
-| 🔐 Pantalla de Login | Autenticación con validación de formulario |
-| 🏠 Panel de Bienvenida | Saludo, hora en tiempo real y clima |
-| 🧩 Componentes | Campos de formulario, tarjetas y barra superior |
-| 🛠 Utilidades | Validaciones, formateo de fechas y datos de clima |
+| Pantalla de Login | Autenticación con validación de formulario |
+| Panel de Bienvenida | Saludo, hora en tiempo real y clima |
+| Componentes | Campos de formulario, tarjetas y barra superior |
+| Utilidades | Validaciones, formateo de fechas y datos de clima |
 
 ---
 
-## ⚙️ Cómo levantar el proyecto
+## Cómo levantar el proyecto
 
 ```bash
 # 1. Entrar al módulo
@@ -69,17 +69,17 @@ npm run preview   # Previsualizar el build
 
 ---
 
-## 🎨 Stack tecnológico
+## Stack tecnológico
 
 - **React 19** — UI declarativa por componentes
 - **Vite 8** — Build tool ultrarrápido
 - **Tailwind CSS 4** — Utilidades de estilo
-- **Lucide React** — Íconos modernos
+- **Lucide React** — Iconos modernos
 - **Day.js** — Manejo de fechas y horas
 
 ---
 
-## 🗒 Notas
+## Notas
 
 - La raíz del repo se mantiene limpia para que cada módulo crezca de forma independiente.
 - Las credenciales de prueba están disponibles desde el link **"Olvidé mi contraseña"** en la pantalla de login.
