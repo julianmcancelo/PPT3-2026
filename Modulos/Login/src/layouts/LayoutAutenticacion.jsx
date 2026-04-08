@@ -24,7 +24,7 @@ export function LayoutAutenticacion({ children }) {
         <div className="flex flex-1 items-center justify-center px-8 py-12 lg:py-0">
           <div className="flex flex-col items-center gap-4 text-center">
             <img
-              src="/footer.png"
+              src="https://ibeltran.com.ar/img/logo/footer.png"
               alt="Instituto Tecnologico Beltran"
               className="h-28 w-auto object-contain drop-shadow-lg"
             />
