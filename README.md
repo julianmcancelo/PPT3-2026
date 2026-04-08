@@ -1,60 +1,85 @@
-# PPT3-2026
+<div align="center">
+  <img src="https://ibeltran.com.ar/img/logo/footer.png" alt="Instituto Tecnológico Beltrán" width="220" />
 
-Repositorio principal del trabajo practico.
+  <h1>PPT3 — 2026</h1>
+  <p>Trabajo Práctico · Instituto Tecnológico Beltrán</p>
 
-## Estructura
+  ![React](https://img.shields.io/badge/React-19-61DAFB?style=flat&logo=react&logoColor=white)
+  ![Vite](https://img.shields.io/badge/Vite-8-646CFF?style=flat&logo=vite&logoColor=white)
+  ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
+  ![Estado](https://img.shields.io/badge/Estado-En%20desarrollo-29ABE2?style=flat)
+</div>
+
+---
+
+## 📁 Estructura del repositorio
 
 ```text
 PPT3-2026/
 ├── Modulos/
 │   └── Login/
 │       ├── src/
+│       │   ├── componentes/   # Componentes reutilizables
+│       │   ├── paginas/       # Vistas principales
+│       │   ├── layouts/       # Estructuras de página
+│       │   ├── datos/         # Datos estáticos y credenciales demo
+│       │   └── utilidades/    # Funciones de validación y helpers
 │       ├── public/
-│       ├── package.json
-│       ├── package-lock.json
 │       ├── vite.config.js
-│       ├── eslint.config.js
-│       └── README.md
+│       └── package.json
 ├── .gitignore
 └── README.md
 ```
 
-## Modulo actual
+---
 
-El proyecto frontend actual vive en:
+## 🚀 Módulo actual — Login
 
-`Modulos/Login`
+El módulo principal vive en `Modulos/Login` e incluye:
 
-Ese modulo contiene:
+| Sección | Descripción |
+|---|---|
+| 🔐 Pantalla de Login | Autenticación con validación de formulario |
+| 🏠 Panel de Bienvenida | Saludo, hora en tiempo real y clima |
+| 🧩 Componentes | Campos de formulario, tarjetas y barra superior |
+| 🛠 Utilidades | Validaciones, formateo de fechas y datos de clima |
 
-- la aplicacion React + Vite
-- la pantalla de login
-- la pantalla posterior de bienvenida
-- utilidades, datos y componentes organizados por responsabilidad
+---
 
-## Como trabajar
+## ⚙️ Cómo levantar el proyecto
 
-1. Entrar al modulo:
+```bash
+# 1. Entrar al módulo
+cd Modulos/Login
 
-   `cd Modulos/Login`
+# 2. Instalar dependencias
+npm install
 
-2. Instalar dependencias:
+# 3. Levantar en desarrollo
+npm run dev
+```
 
-   `npm install`
+### Otros comandos
 
-3. Levantar el proyecto:
+```bash
+npm run lint      # Verificar calidad de código
+npm run build     # Generar build de producción
+npm run preview   # Previsualizar el build
+```
 
-   `npm run dev`
+---
 
-4. Verificar calidad:
+## 🎨 Stack tecnológico
 
-   `npm run lint`
+- **React 19** — UI declarativa por componentes
+- **Vite 8** — Build tool ultrarrápido
+- **Tailwind CSS 4** — Utilidades de estilo
+- **Lucide React** — Íconos modernos
+- **Day.js** — Manejo de fechas y horas
 
-5. Generar build:
+---
 
-   `npm run build`
+## 🗒 Notas
 
-## Nota de organizacion
-
-Se dejo la raiz del repo limpia para que cada modulo pueda crecer de manera independiente.
-El modulo `Login` ya esta preparado para seguir separando responsabilidades internas por componentes, datos y utilidades.
+- La raíz del repo se mantiene limpia para que cada módulo crezca de forma independiente.
+- Las credenciales de prueba están disponibles desde el link **"Olvidé mi contraseña"** en la pantalla de login.
