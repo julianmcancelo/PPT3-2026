@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://ibeltran.com.ar/img/logo/footer.png" alt="Instituto Tecnológico Beltrán" width="220" />
+  <img src="./assets/logo.png" alt="Instituto Tecnológico Beltrán" width="220" />
 
   <h1>PPT3 — 2026</h1>
   <p>Trabajo Práctico · Instituto Tecnológico Beltrán</p>
