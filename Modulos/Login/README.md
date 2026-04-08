@@ -1,59 +1,88 @@
-# Modulo Login
+<div align="center">
+  <img src="https://ibeltran.com.ar/img/logo/footer.png" alt="Instituto Tecnológico Beltrán" width="180" />
 
-Aplicacion frontend creada con React + Vite + Tailwind.
+  <h2>Módulo Login</h2>
+  <p>Sistema de acceso institucional — Instituto Tecnológico Beltrán</p>
 
-## Objetivo
+  ![React](https://img.shields.io/badge/React-19-61DAFB?style=flat&logo=react&logoColor=white)
+  ![Vite](https://img.shields.io/badge/Vite-8-646CFF?style=flat&logo=vite&logoColor=white)
+  ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
+  ![Estado](https://img.shields.io/badge/Estado-En%20desarrollo-29ABE2?style=flat)
+</div>
 
-Este modulo concentra:
+---
 
-- el login institucional
-- la validacion basica de acceso
-- la pantalla de bienvenida posterior al login
-- el panel con fecha, hora, clima y accesos rapidos
+## Descripción
 
-## Estructura principal
+Módulo frontend de autenticación institucional. Incluye pantalla de login con validación, panel de bienvenida con información en tiempo real y accesos rápidos.
+
+---
+
+## Estructura
 
 ```text
 Modulos/Login/
 ├── public/
-├── src/
-│   ├── componentes/
-│   │   ├── panel/
-│   │   ├── CampoFormulario.jsx
-│   │   └── FormularioInicioSesion.jsx
-│   ├── datos/
-│   ├── layouts/
-│   ├── paginas/
-│   └── utilidades/
-├── package.json
-├── package-lock.json
-├── vite.config.js
-├── eslint.config.js
-└── index.html
+└── src/
+    ├── componentes/
+    │   ├── panel/              # Tarjetas del panel de bienvenida
+    │   ├── CampoFormulario.jsx # Input reutilizable con toggle de contraseña
+    │   └── FormularioInicioSesion.jsx
+    ├── datos/                  # Credenciales demo y datos estáticos
+    ├── layouts/                # LayoutAutenticacion (split-screen)
+    ├── paginas/                # PaginaInicioSesion · PantallaBienvenida
+    └── utilidades/             # Validaciones, clima y formateo de fechas
 ```
 
-## Scripts
+---
 
-- `npm install`: instala dependencias
-- `npm run dev`: levanta el entorno de desarrollo
-- `npm run build`: genera la build de produccion
-- `npm run lint`: valida el codigo con ESLint
+## Flujo de la aplicación
 
-## Flujo actual
+```
+[ Pantalla de Login ]
+        |
+  Credenciales OK?
+        |
+        └── Si  →  [ Panel de Bienvenida ]
+                        ├── Saludo personalizado
+                        ├── Fecha y hora en tiempo real
+                        ├── Clima actual (Open-Meteo API)
+                        └── Accesos rápidos
+```
 
-1. El usuario inicia sesion desde la pantalla de acceso.
-2. Si las credenciales son correctas, se muestra la pantalla de bienvenida.
-3. La pantalla posterior consulta clima actual y actualiza la hora en tiempo real.
+---
 
-## Criterios de arquitectura
+## Comandos
 
-- componentes chicos y separados por responsabilidad
-- datos fijos centralizados en `src/datos`
-- funciones reutilizables en `src/utilidades`
-- paginas como orquestadoras de estado y composicion
+```bash
+# Instalar dependencias
+npm install
 
-## Ruta de trabajo
+# Desarrollo
+npm run dev
 
-Todos los comandos de este modulo deben ejecutarse desde:
+# Build de producción
+npm run build
 
-`Modulos/Login`
+# Lint
+npm run lint
+
+# Preview del build
+npm run preview
+```
+
+---
+
+## Arquitectura
+
+| Carpeta | Responsabilidad |
+|---|---|
+| `componentes/` | Piezas visuales reutilizables e independientes |
+| `paginas/` | Orquestadoras de estado y composición |
+| `layouts/` | Estructura visual de pantallas completas |
+| `datos/` | Datos estáticos centralizados |
+| `utilidades/` | Funciones puras sin efectos secundarios |
+
+---
+
+> Todos los comandos deben ejecutarse desde `Modulos/Login`
